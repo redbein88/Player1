@@ -36,11 +36,30 @@ location.replace("mplayer.php?u=<?=$_GET["u"]?>");
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-like" data-href="https://facebook.com/alltvgoals" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 </div>
-
-	<object type="application/x-shockwave-flash" name="player" data="http://sportlive.ws/assets/swf/player.swf" width="100%" height="100%" id="player" style="visibility: visible;" __idm_id__="918529"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque">
-		<param name="flashvars" value="src=<?=$_GET["u"]?>/playlist.m3u8&amp;plugin_hls=http://sportlive.ws/assets/swf/hls_plugin.swf&amp;javascriptCallbackFunction=onJSBridge&amp;autoPlay=true&amp;controlBarAutoHide=false"?>/playlist.m3u8&amp;plugin_hls=http://sportlive.ws/assets/swf/hls_plugin.swf&amp;javascriptCallbackFunction=onJSBridge&amp;autoPlay=true&amp;controlBarAutoHide=false"?>/playlist.m3u8&amp;plugin_hls=http://sportlive.ws/assets/swf/hls_plugin.swf&amp;javascriptCallbackFunction=onJSBridge&amp;autoPlay=true&amp;controlBarAutoHide=false"></object>
-	
 		
+	
+	
+	<script src="http://content.jwplatform.com/libraries/V6NfEzT7.js"></script>
+    <div id="player"></div>
+    <script>
+      jwplayer('player').setup({
+        sources: [{
+          file: "rtmp://163.172.67.164:80/live/chfour",
+          file: "<?=$_GET["u"]?>"
+        }],
+        width: "100%",
+        aspectratio: "16:9",
+        hlshtml: true,
+        "autostart": true
+      });
+    </script>
+	   <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+	
+	
+	
+	
+	
 </div>
 
 </div>
